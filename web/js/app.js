@@ -278,6 +278,26 @@
 
 			$('.results__container').html(html);
 
+			$( ".hidden-stops" ).each(function( index ) {
+				
+				var weights = 0;
+
+				$(this).find('.hidden-stop').each(function( index ) {
+
+					var parsed = parseInt($(this).data('weight'), 10);
+					if(parsed > 0) {
+						weights = weights + $(this).data('weight');
+					}
+
+				});
+
+				var old = parseInt($(this).parent().prevAll('.results__result').first().find('.minutes').text(), 10);
+
+
+				$(this).parent().prevAll('.results__result').first().find('.minutes').text(''+(weights + old));
+
+			});
+
 		};
 
 
@@ -305,7 +325,7 @@
 
 						'<div class="content">',
 							'<div class="time-estimate">',
-								'<i class="fal fa-clock"></i> Seuraavalla pysäkille: ', data.toNext ,' min',
+								'<i class="fal fa-clock"></i> Seuraavalla pysäkille: <span class="minutes">', data.toNext ,'</span> min',
 							'</div>',
 						'</div>',
 
@@ -348,8 +368,6 @@
 
 				var stop = data.stops[index];
 
-				console.log(data.stops.length);
-
 				if(data.stops.length > 1 && printLine) {
 					html.push('<div class="results__line results__line--', data.color,'"></div>');
 				}
@@ -357,7 +375,7 @@
 				printLine = true;
 
 				html.push(
-					'<div class="hidden-stop slide-in-fwd-center">',
+					'<div class="hidden-stop slide-in-fwd-center" data-weight="', stop.weight ,'">',
 						'<div class="route route--', data.color,'">',
 							'<div class="route-container">',
 								'<i class="fas fa-map-marker-alt"></i>',
@@ -402,7 +420,7 @@
 
 						'<div class="content">',
 							'<div class="time-estimate">',
-								'<i class="fal fa-clock"></i> Seuraavalla pysäkille: ', data.toNext ,' min',
+								'<i class="fal fa-clock"></i> Seuraavalla pysäkille: <span class="minutes">', data.toNext ,'</span> min',
 							'</div>',
 						'</div>',
 
@@ -424,7 +442,7 @@
 						'<h2>Olet perillä pysäkillä <span class="stop-icon stop-icon-lg">',data.stop,'</span></h2>',
 						
 						'<div class="time-estimate">',
-							'<i class="fal fa-clock"></i> Matkan kokonaiskesto: ',data.total,' min',
+							'<i class="fal fa-clock"></i> Matkan kokonaiskesto: <span class="minutes">',data.total,'</span> min',
 						'</div>',
 					'</div>',
 				'</div>'
