@@ -1,0 +1,5 @@
+.DS_Store
+.vagrant
+package-lock.json
+node_modules
+*.map

@@ -20,3 +20,4 @@ User interface is designed to be clear and stylish, displaying relevant informat
 - What is the final destination of your bus?
 - Unimportant bus stops are hidden by default
 - ...but you can easilly see them if you want to
+- Mobile responsive as well
