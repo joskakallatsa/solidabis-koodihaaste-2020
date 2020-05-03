@@ -1,0 +1,364 @@
+
+	$block: 'results';
+
+	$blue: #0054a6; //#00a3dd;
+	$red: #fc5b62; // #c62941;
+	$yellow: #FFC107; //#fdcb84;
+	$green: #32a067; //#88b785;
+
+	.#{$block} {
+
+		position: relative;
+		background-color: #f8f8f8;
+		position: relative;
+		padding-top: 40px;
+		padding-bottom: 80px;
+		min-height: 200px;
+
+	}
+
+	.#{$block}__container {
+
+		position: relative;
+
+	}
+
+	.#{$block}__result {
+
+		position: relative;
+
+		background-color: #FFFFFF;
+		-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+	    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+	    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+
+    	border-radius: 16px;
+    	margin-top: 2px;
+    	margin-bottom: 2px;
+
+		h2 {
+			margin: 0;
+			padding: 15px 65px 0 15px;
+			font-weight: 500;
+			font-size: 16px;
+			color: #333;
+		}
+
+		p {
+			margin: 0;
+			padding: 0 65px 15px 15px;
+			font-weight: 400;
+		}
+
+		.row {
+			position: relative;
+		}
+
+		.route {
+
+			color: #FFFFFF;
+
+			font-size: 32px;
+			text-align: center;
+			width: 60px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			height: 100%;
+			
+			&--red {
+				background-color: $red;
+			}
+			&--green {
+				background-color: $green;
+			}
+			&--blue {
+				background-color: $blue;
+			}
+			&--yellow {
+				background-color: $yellow;
+			}
+
+
+			.fa-bus-alt {
+				margin-top: 20px;
+			}
+		}
+
+		.route--path {
+			
+			background-image: url(../../img/route.png);
+			background-repeat: repeat-y;
+			background-position: bottom;
+		
+		}
+
+		.content {
+
+			position: relative;
+			padding-left: 60px;
+
+			.busstop-info {
+				position: absolute;
+			    display: block;
+			    font-size: 40px;
+			    color: #f9f9f9;
+			    right: 17px;
+			    top: 6px;
+			}
+
+			p {
+				font-size: 14px;
+			    line-height: 1.6;
+			    font-family: "Poppins",Helvetica,sans-serif;
+			    color: #555;
+			}
+
+			.time-estimate {
+				border-top: 1px solid #ededed;
+				position: relative;
+				color: #555;
+				line-height: 1.6;
+				font-size: 14px;
+				padding: 10px 15px;
+				width: auto;
+				font-weight: 500;
+				text-transform: uppercase;
+				font-size: 13px;
+    			background-color: #f9f9f9;
+				.fa-clock {
+					font-size: 13px;
+    				margin-right: 4px;
+				}
+			}
+		}
+	}
+
+	.#{$block}__line {
+
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 8px;
+		background-color: transparent;
+		
+
+		&::after {
+			content: "";
+			display: block;
+			height: 4px;
+			width: 3px;
+			position: absolute;
+			left: 28px;
+			top: 2px;
+			z-index: 1;
+		}
+
+		&--red {
+			&::after {
+				background-color: $red;
+			}
+		}
+
+		&--green {
+			&::after {
+				background-color: $green;
+			}
+		}
+
+		&--yellow {
+			&::after {
+				background-color: $yellow;
+			}
+		}
+
+		&--blue {
+			&::after {
+				background-color: $blue;
+			}
+		}
+		
+	}
+
+
+
+	.#{$block}__result-multiple {
+
+		background-color: transparent;
+		width: 100%;
+		margin-top: 6px;
+		margin-bottom: 6px;
+
+		a.show-all-stops {
+			display: inline-block;
+
+			&:hover {
+				.info {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.route {
+
+			color: #FFFFFF;
+			font-size: 16px;
+			text-align: center;
+			width: 60px;
+			position: relative;
+			display: inline-block;
+			
+			&--red {
+				color: $red;
+			}
+			&--green {
+				color: $green;
+			}
+			&--blue {
+				color: $blue;
+			}
+			&--yellow {
+				color: $yellow;
+			}
+
+		}
+
+		.info {
+			font-size: 14px;
+			display: inline-block;
+			color: #555;
+			padding-left: 15px;
+		}
+		
+
+		.route-container {
+
+			position: relative;
+			text-align: center;
+			display: inline-block;
+
+			.fa-map-marker-alt {
+				display: inline-block;
+				font-size: 24px;
+				vertical-align: middle;
+			}
+
+			.stop-count-container {
+
+				position: absolute;
+				top: 0;
+				left: 100%;
+				white-space: nowrap;
+				vertical-align: middle;
+
+
+				.fa-times {
+					font-size: 10px;
+				    margin-left: 3px;
+				    margin-right: 3px;
+				}
+
+
+				.count {
+					font-size: 14px;
+				}
+
+				
+			}
+		}
+
+
+		.hidden-stops {
+			display: none;
+			.hidden-stop {
+				position: relative;
+
+				&:not(:first-child) {
+					margin-top: 4px;
+				}
+				&:not(:last-child) {
+					margin-bottom: 4px;
+				}
+			}
+		}
+
+	}
+
+	.#{$block}__result-end {
+
+		h2 {
+			padding-top: 12px;
+			margin-bottom: 12px;
+			font-size: 20px;
+		}
+
+		.route .fa-map-marker-alt {
+	    	margin-top: 14px;
+	    }
+
+	}
+
+	span.stop-icon {
+		display: inline-block;
+	    border-radius: 11px;
+	    width: 22px;
+	    height: 22px;
+	    text-align: center;
+	    line-height: 22px;
+	    background-color: #ededed;
+	    text-align: center;
+	    font-weight: 500;
+
+	    &.stop-icon-lg {
+	    	border-radius: 13px;
+		    width: 26px;
+		    height: 26px;
+		    line-height: 26px;
+	    }
+	}
+
+
+
+
+		
+	.slide-in-fwd-center {
+		-webkit-animation: slide-in-fwd-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+		        animation: slide-in-fwd-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+	}
+	/* ----------------------------------------------
+	 * Generated by Animista on 2020-5-3 20:55:57
+	 * Licensed under FreeBSD License.
+	 * See http://animista.net/license for more info. 
+	 * w: http://animista.net, t: @cssanimista
+	 * ---------------------------------------------- */
+
+	/**
+	 * ----------------------------------------
+	 * animation slide-in-fwd-center
+	 * ----------------------------------------
+	 */
+	@-webkit-keyframes slide-in-fwd-center {
+	  0% {
+	    -webkit-transform: translateZ(-1400px);
+	            transform: translateZ(-1400px);
+	    opacity: 0;
+	  }
+	  100% {
+	    -webkit-transform: translateZ(0);
+	            transform: translateZ(0);
+	    opacity: 1;
+	  }
+	}
+	@keyframes slide-in-fwd-center {
+	  0% {
+	    -webkit-transform: translateZ(-1400px);
+	            transform: translateZ(-1400px);
+	    opacity: 0;
+	  }
+	  100% {
+	    -webkit-transform: translateZ(0);
+	            transform: translateZ(0);
+	    opacity: 1;
+	  }
+	}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Reittiopas - Joska Kallatsa</title>
+	<meta name="description" content="The HTML5 Herald">
+	<meta name="author" content="Joska Kallatsa">
+
+  	<link rel="stylesheet" href="build/css/main.css">
+  	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+	<div class="app-wrapper">
+
+
+
+		<header class="nav">
+			<a target="_blank" href="https://koodihaaste.solidabis.com/">Solidabis Koodihaaste 2020</a>, <a href="https://joska.fi" target="_blank">Joska Kallatsa</a>
+		</header>
+
+
+
+
+		<section class="search" style="background-image: url(img/emoji-waiting2.png);">
+			<div class="grid-container">
+
+				<div class="search-form clearfix">
+
+					<h1>Reittiopas</h1>
+
+					<div class="select-container clearfix">
+						<select id="from" class="wide">
+							<option value="0">Valitse alkupysäkki</option>
+						</select>
+						<select id="to" class="wide">
+							<option value="0">Valitse päätepysäkki</option>
+						</select>
+					</div>
+					
+					<div class="action-container">
+						<a class="findPath" href="#">Etsi reitti</a>
+					</div>
+					
+				</div>
+
+			</div>
+		</section>
+
+
+
+		<section class="results">
+			<div class="grid-container">
+				<div class="results__container">
+					<div style="text-align:center;">Valitse alku- ja päätepysäkki.</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<footer class="footer">
+			Bus stop image by <a href="https://toolbox.finland.fi" target="_blank">Finland Toolbox</a><br>
+			<a href="https://www.vecteezy.com/free-vector/space-needle">Space Needle Vectors by Vecteezy</a>
+		</footer>
+
+
+	</div>
+
+
+
+	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/lib/jquery.nice-select.min.js"></script>
+	<script src="build/js/main.js"></script>
+	<script src="js/app.js"></script>
+
+
+</body>
+</html>
