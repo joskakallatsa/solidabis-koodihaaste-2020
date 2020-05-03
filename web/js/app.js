@@ -325,7 +325,7 @@
 
 						'<div class="content">',
 							'<div class="time-estimate">',
-								'<i class="fal fa-clock"></i> Seuraavalla pysäkille: <span class="minutes">', data.toNext ,'</span> min',
+								'<i class="fal fa-clock"></i> Seuraava vaihto tai määränpää: <span class="minutes">', data.toNext ,'</span> min',
 							'</div>',
 						'</div>',
 
@@ -420,7 +420,7 @@
 
 						'<div class="content">',
 							'<div class="time-estimate">',
-								'<i class="fal fa-clock"></i> Seuraavalla pysäkille: <span class="minutes">', data.toNext ,'</span> min',
+								'<i class="fal fa-clock"></i> Seuraava vaihto tai määränpää: <span class="minutes">', data.toNext ,'</span> min',
 							'</div>',
 						'</div>',
 
