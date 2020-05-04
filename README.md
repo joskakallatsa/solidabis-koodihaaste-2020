@@ -18,11 +18,11 @@ User interface is all about UX. It shows relevant information about the bus rout
 Bus stops are groupped and hidden by default if there is no need to change bus on a single bus stop. Finally, last stops calculates total time of the bus route.
 
 
-### Technologies:
+### Technologies
 Simple HTML, SASS and JavaScript + jQuery for DOM manipulation. Few algorithm tests with JEST.
 
 
-### Build:
+### Build
 - Build CSS: npm run sass:build
 - Only algorithms use some ES6, build JS: npm run js:build
 - Open web/index.html
